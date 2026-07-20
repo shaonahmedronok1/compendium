@@ -1,0 +1,38 @@
+\begin{titlepage}
+	\thispagestyle{empty}
+
+	% ── Photo pinned absolutely to paper north-west — no margin math at all ──
+	\begin{tikzpicture}[remember picture, overlay]
+		\clip (current page.north west)
+		rectangle ([yshift=-0.52\paperheight] current page.north east);
+		\node[anchor=north west, inner sep=0pt] at (current page.north west){%
+			\includegraphics[width=\paperwidth]{cover-photo}%
+		};
+	\end{tikzpicture}
+
+	% ── Push flow cursor to just below the photo ─────────────────────────────
+	\vspace*{\dimexpr0.52\paperheight-\topmargin-\headheight-\headsep-1in-\voffset\relax}
+	\vspace{14mm}
+
+	% ── Title block ──────────────────────────────────────────────────────────
+	\noindent
+	{\fontsize{72}{76}\selectfont\coverfont\bfseries\color{Accent}%
+		\MakeUppercase{Upper School}%
+	}\par
+	\vspace{4pt}
+	\noindent{\color{Rule}\rule{0.18\textwidth}{1.5pt}}\par
+	\vspace{10pt}
+
+	\noindent
+	{\fontsize{17}{15}\selectfont\sffamily\color{Muted}\textbf{\docYear}}\par
+	\vspace{4pt}
+	{\fontsize{29}{24}\selectfont\sffamily\bfseries\color{Heading}%
+		\MakeUppercase{Curriculum Guide}%
+	}\par
+	\vspace{3pt}
+	{\fontsize{22}{14}\selectfont\sffamily\color{Muted}%
+		\MakeUppercase{\docSubtitle}%
+	}\par
+
+	\vspace*{18mm}
+\end{titlepage}

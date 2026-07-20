@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COMMANDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Latin Abbreviations
+\newcommand{\ie}{i.e.\ }
+\newcommand{\eg}{e.g.\ }
+\newcommand{\etc}{etc.\ }
+
+% Semantic Highlighting
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\country}[1]{\textsc{#1}}
+
+% Right-aligned attribution
+\newcommand{\source}[1]{%
+    \vspace{1em}
+    \begin{flushright}
+        \footnotesize\itshape
+        Source: #1
+    \end{flushright}
+}
+
+% Callout / important quote block
+\newenvironment{important}
+    {\begin{quote}\itshape}
+    {\end{quote}}
+
+% Full blank page
+\newcommand{\blankpage}{%
+    \clearpage
+    \thispagestyle{empty}
+    \null
+    \clearpage
+}
+
+% Part banner (centred, coloured)
+\newcommand{\partbanner}[1]{%
+    \vspace{1.5em}
+    \begin{center}
+        {\Huge\sffamily\bfseries\color{Accent}#1}
+    \end{center}
+    \vspace{0.5em}
+    \noindent{\color{Rule}\rule{\textwidth}{0.4pt}}
+    \vspace{1em}
+}

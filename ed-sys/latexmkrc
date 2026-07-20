@@ -1,0 +1,26 @@
+###############################################################################
+# latexmk configuration
+###############################################################################
+
+# LuaLaTeX
+$pdf_mode = 4;
+
+# Output & aux files go to output/
+$out_dir = 'output';
+$aux_dir = 'output';
+
+$lualatex = 'lualatex --interaction=nonstopmode %O %S';
+
+# Biber (matches biblatex backend=biber in preamble.tex)
+add_cus_dep('bcf', 'bbl', 0, 'run_biber');
+sub run_biber {
+    system("biber $_[0]");
+}
+
+$max_repeat = 5;
+$pvc_view_file_via_temporary = 0;
+$silent = 0;
+
+$clean_ext .= ' acn acr alg bbl bcf blg fdb_latexmk fls glo glg gls ist lof lot out run.xml synctex.gz toc xdv nav snm vrb';
+
+###############################################################################

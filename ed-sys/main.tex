@@ -1,0 +1,32 @@
+\documentclass[
+    10pt,
+    a4paper,
+    oneside,
+    openany,
+    numbers=noenddot,
+    bibliography=totoc,
+    index=totoc,
+    listof=totoc
+]{scrbook}
+
+%% Load order: metadata → colors → fonts → preamble → layout → commands
+\input{metadata}
+\input{colors}
+\input{fonts}
+\input{preamble}
+\input{layout}
+\input{commands}
+
+\begin{document}
+
+\frontmatter
+\input{frontmatter}
+
+\mainmatter
+\input{01-united-states}
+
+\backmatter
+\printbibliography
+\printindex
+
+\end{document}

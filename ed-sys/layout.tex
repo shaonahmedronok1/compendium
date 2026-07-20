@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LAYOUT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+	a4paper,
+	top=14mm,
+	bottom=16mm,
+	inner=14mm,
+	outer=14mm,
+	headheight=16pt,
+	headsep=6mm,
+	footskip=12mm
+]{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\linespread{1.10}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+%% Section numbering off (curriculum-guide style)
+\setcounter{secnumdepth}{-1}
+
+%% ── Running heads: left = INSTITUTION | right = GUIDE TITLE ──────────────
+\usepackage[
+	automark,
+	headsepline=0.4pt,
+	plainheadsepline
+]{scrlayer-scrpage}
+
+\clearpairofpagestyles
+\setkomafont{pageheadfoot}{\footnotesize\sffamily\color{Muted}}
+\setkomafont{pagenumber}{\footnotesize\sffamily\bfseries\color{black}}
+
+\ihead{\MakeUppercase{\docInstitution}}
+\ohead{\MakeUppercase{\docTitle}}
+\ofoot*{\pagemark}
+\pagestyle{scrheadings}
+
+%% ── Chapter / Section fonts ───────────────────────────────────────────────
+\setkomafont{chapter}{\Huge\sffamily\bfseries\color{Accent}}
+\setkomafont{section}{\large\sffamily\bfseries\color{Accent}}
+\setkomafont{subsection}{\normalsize\sffamily\bfseries\color{Heading}}
+\setkomafont{subsubsection}{\normalsize\sffamily\color{Heading}}
+
+\RedeclareSectionCommand[beforeskip=-1.2\baselineskip, afterskip=0.8\baselineskip]{chapter}
+\RedeclareSectionCommand[beforeskip=1.5\baselineskip, afterskip=0.4\baselineskip]{section}
+\RedeclareSectionCommand[beforeskip=1.0\baselineskip, afterskip=0.3\baselineskip]{subsection}
+
+%% ── TOC: dot leaders matching the screenshot style ───────────────────────
+\setcounter{tocdepth}{2}
+\setkomafont{disposition}{\sffamily\bfseries}
+\setkomafont{chapterentry}{\sffamily\bfseries\color{Accent}}
+
+\DeclareTOCStyleEntry[
+	linefill=\TOCLineLeaderFill,
+	entryformat=\sffamily\bfseries\color{Accent},
+	pagenumberformat=\sffamily\bfseries
+]{chapter}{chapter}
+\DeclareTOCStyleEntry[
+	linefill=\TOCLineLeaderFill,
+	entryformat=\sffamily\bfseries,
+	pagenumberformat=\sffamily\bfseries
+]{section}{section}
+\DeclareTOCStyleEntry[
+	linefill=\TOCLineLeaderFill,
+	entryformat=\sffamily,
+	pagenumberformat=\sffamily
+]{tocline}{subsection}
+
+%% ── Captions ─────────────────────────────────────────────────────────────
+\usepackage{caption}
+\captionsetup{
+	font=small,
+	labelfont=bf,
+	labelsep=period,
+	justification=raggedright,
+	singlelinecheck=false
+}
