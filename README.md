@@ -8,7 +8,7 @@ Structured knowledge documents in LaTeX.
 
 Comprehensive breakdown of K–12 and higher education systems across the United States and Europe.
 
-**[View folder](ed-sys)** | **[Build](#build)**
+**[View folder](ed-sys)** 
 
 | | | | |
 |---|---|---|---|
@@ -21,7 +21,7 @@ Comprehensive breakdown of K–12 and higher education systems across the United
 
 Description of next project.
 
-**[View folder](next-project-folder)** | **[Build](#build)**
+**[View folder](next-project-folder)** 
 
 | | | | |
 |---|---|---|---|
@@ -34,12 +34,38 @@ Description of next project.
 - LaTeX distribution with `latexmk` and `lualatex`
 - TeX Gyre fonts (Pagella, Heros Condensed)
 
-## Build
+## Workflow
+
+Before building, clean output artifacts:
 
 ```bash
-cd ed-sys
-latexmk main.tex
+rm -rf output/
 ```
+
+Then build once for a clean PDF:
+
+```bash
+latexmk -r latexmkrc main.tex
+```
+
+For live editing with auto-recompile, open three terminal panes:
+
+**Pane 1 — Continuous compiler (watches for changes):**
+```bash
+latexmk -pvc main.tex
+```
+
+**Pane 2 — Editor:**
+```bash
+hx main.tex
+```
+
+**Pane 3 — Live PDF viewer (auto-reloads):**
+```bash
+zathura output/main.pdf
+```
+
+Start Pane 1 first, then Pane 3 (PDF must exist before viewer opens). Edit in Pane 2, save, and watch changes appear in Pane 3 within seconds.
 
 ## License
 
