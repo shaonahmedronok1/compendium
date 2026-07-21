@@ -1,19 +1,23 @@
 # Compendium
 
-A structured collection of knowledge documents built in LaTeX.
+Structured knowledge documents in LaTeX and Typst.
 
-## Education Systems — USA & Europe
+---
 
-A comparative breakdown of K–12 and higher education systems
+## ed-sys — Education Systems: USA & Europe
+
+Comparative breakdown of K–12 and higher education
 across the United States and Europe.
 
-![Preview](assets/preview.png)
+![](assets/ed-sys-1.png)
+![](assets/ed-sys-2.png)
+![](assets/ed-sys-3.png)
+![](assets/ed-sys-4.png)
 
-## Build
+---
 
-Requires a LaTeX distribution with `latexmk` and `lualatex`.
+## next-project-folder-name — Title Here
 
-```bash
-cd ed-sys
-latexmk main.tex
-```
+Description here.
+
+![](assets/next-1.png)
