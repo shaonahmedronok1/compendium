@@ -30,16 +30,10 @@ hx main.tex
 zathura output/main.pdf
 ```
 
-### Preview
-
-![Cover](assets/ed-sys-01.png)
-
-![Contents](assets/ed-sys-02.png)
-
-![Sample page](assets/ed-sys-03.png)
-
-![Sample page](assets/ed-sys-04.png)
-
+| | | | |
+|---|---|---|---|
+| [![](assets/ed-sys-01.png)](assets/ed-sys-01.png) | [![](assets/ed-sys-02.png)](assets/ed-sys-02.png) | [![](assets/ed-sys-03.png)](assets/ed-sys-03.png) | [![](assets/ed-sys-04.png)](assets/ed-sys-04.png) |
+| [![](assets/ed-sys-05.png)](assets/ed-sys-05.png) | [![](assets/ed-sys-06.png)](assets/ed-sys-06.png) | [![](assets/ed-sys-07.png)](assets/ed-sys-07.png) | [![](assets/ed-sys-08.png)](assets/ed-sys-08.png) |
 ---
 
 ## License
